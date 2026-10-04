@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 42px; fill: url(#titleGrad); }
+    .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 18px; fill: #94a3b8; }
+    .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 13px; fill: #f8fafc; }
+    
+    /* Dynamic background pulse animation */
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.3); opacity: 0.9; }
+    }
+    
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes dashMove {
+      to { stroke-dashoffset: -40; }
+    }
+
+    .node { animation: pulseNode 4s infinite ease-in-out; transform-origin: center; }
+    .node-delay-1 { animation-delay: 1s; }
+    .node-delay-2 { animation-delay: 2s; }
+    .floating-bg { animation: floatCard 6s infinite ease-in-out; }
+    .connecting-line { stroke: #4f46e5; stroke-width: 1.5; stroke-dasharray: 6 4; animation: dashMove 3s linear infinite; opacity: 0.5; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg)" />
+  
+  <!-- Dynamic Graphic Elements in Background (Z-index lower than text) -->
+  <g class="floating-bg" opacity="0.6">
+    <circle cx="150" cy="80" r="60" fill="#38bdf8" filter="url(#glow)" opacity="0.15" />
+    <circle cx="1050" cy="220" r="90" fill="#c084fc" filter="url(#glow)" opacity="0.15" />
+  </g>
+
+  <!-- Node network (Dynamic Background aspect) -->
+  <g opacity="0.35">
+    <line x1="100" y1="220" x2="250" y2="250" class="connecting-line" />
+    <line x1="250" y1="250" x2="400" y2="210" class="connecting-line" />
+    <line x1="800" y1="80" x2="950" y2="120" class="connecting-line" />
+    <line x1="950" y1="120" x2="1100" y2="60" class="connecting-line" />
+
+    <circle cx="100" cy="220" r="6" fill="#38bdf8" class="node" />
+    <circle cx="250" cy="250" r="8" fill="#818cf8" class="node node-delay-1" />
+    <circle cx="400" cy="210" r="5" fill="#c084fc" class="node node-delay-2" />
+    <circle cx="800" cy="80" r="7" fill="#38bdf8" class="node node-delay-1" />
+    <circle cx="950" cy="120" r="6" fill="#818cf8" class="node node-delay-2" />
+    <circle cx="1100" cy="60" r="8" fill="#c084fc" class="node" />
+  </g>
+
+  <!-- Decorative Border Grid Overlay -->
+  <rect x="20" y="20" width="1160" height="260" rx="12" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+
+  <!-- Main Content Foreground (Unobstructed) -->
+  <g transform="translate(60, 75)">
+    <!-- Icon/Badge Top -->
+    <rect x="0" y="0" width="230" height="30" rx="15" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+    <text x="15" y="20" class="badge-text" fill="#38bdf8">🔒 CLOUD SECURITY &amp; IAM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="75" class="title">Awesome CIEM Ecosystem</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="115" class="subtitle">Cloud Infrastructure Entitlement Management • Permissions Analysis • Least-Privilege</text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 140)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="140" height="32" rx="8" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="15" y="21" class="badge-text">☁️ Multi-Cloud</text>
+
+      <!-- Pill 2 -->
+      <rect x="152" y="0" width="165" height="32" rx="8" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="167" y="21" class="badge-text">🔐 Identity Risk</text>
+
+      <!-- Pill 3 -->
+      <rect x="329" y="0" width="175" height="32" rx="8" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="344" y="21" class="badge-text">🔓 Open Source &amp; SaaS</text>
+    </g>
+  </g>
+</svg>
