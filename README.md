@@ -57,9 +57,9 @@ Products below are sorted in **descending order of Company Size / Financial Scal
 
 ## 🔓 Open-Source GitHub Projects
 
-Sorted by **Star Count (Descending)**. Click on any star badge to visit that repository's stargazers page! 🌟
+Sorted by **Stars_Count (Descending)**. Click on any Stars_Badge to visit that repository's stargazers page! 🌟
 
-| Repo / Tool | Description | Stars 🌟 |
+| Repo / Tool | Description | GitHub_Stars 🌟 |
 | :--- | :--- | :--- |
 | **[Prowler](https://github.com/prowler-cloud/prowler)** | **The premier open-source multi-cloud security assessment tool.** Covers AWS, Azure, GCP, Kubernetes, M365, and Okta with 800+ checks and 65% AWS IAM privilege escalation coverage. Apache-2.0. | [<img src="https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white" alt="Prowler Stars" />](https://github.com/prowler-cloud/prowler/stargazers) |
 | **[CloudQuery](https://github.com/cloudquery/cloudquery)** | **High-performance open-source data movement framework.** Extracts cloud configurations and IAM entitlements into SQL databases (PostgreSQL, Snowflake) for custom CIEM querying. Apache-2.0. | [<img src="https://img.shields.io/github/stars/cloudquery/cloudquery?style=social&color=white" alt="CloudQuery Stars" />](https://github.com/cloudquery/cloudquery/stargazers) |
@@ -80,7 +80,7 @@ Contributions are welcome! Help us keep this list up to date and comprehensive:
 
 1. 🍴 **Fork** this repository.
 2. 📝 Add or edit entries in `README.md` following the table formatting.
-3. 🔗 Provide factual descriptions, official website links, and accurate star badges.
+3. 🔗 Provide factual descriptions, official website links, and accurate Stars_Badges.
 4. 🚀 Submit a **Pull Request** with a brief summary of changes.
 
 ---
@@ -99,7 +99,7 @@ If you find this repository helpful, please consider supporting the project:
 
 - This list is **community-curated** for educational and reference purposes only.
 - CIEM tools interact with critical IAM configurations and credentials; evaluate each tool carefully in non-production environments first.
-- All financial figures and star counts reflect historical data and publicly available disclosures.
+- All financial figures and Stars_Counts reflect historical data and publicly available disclosures.
 
 ---
 
@@ -110,3 +110,12 @@ If you find this repository helpful, please consider supporting the project:
 ---
 
 <p align="center">Made with ❤️ for Cloud Security Architects, IAM Engineers, and DevSecOps Teams worldwide.</p>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Cloud-Infrastructure-Entitlement-Management-CIEM&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Cloud-Infrastructure-Entitlement-Management-CIEM_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Cloud-Infrastructure-Entitlement-Management-CIEM_growth.svg">
+  </picture>
+</a>
